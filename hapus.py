@@ -27,6 +27,14 @@ class Perpustakaan:
 
     def tampilkan_daftar_hapus(self):
         print("Daftar yang telah dihapus:", self.list_hapus)
+    #hapus 
+    
+    def hapus_buku(self, judul):
+        for buku in self.daftar_buku:
+            if buku.judul == judul and not buku.dipinjam:
+                self.daftar_buku.remove(buku)
+                return f"Buku {judul} berhasil dihapus."
+        return f"Buku {judul} tidak ditemukan atau sedang dipinjam."
 
 
 # Contoh penggunaan
@@ -35,10 +43,10 @@ perpustakaan = Perpustakaan()
 while True:
     print("\nPilihan Menu:")
     print("1. Tambah Item")
-    print("2. Hapus Item Sementara")
-    print("3. Kembalikan Item yang Telah Dihapus")
-    print("4. Tampilkan Daftar Sementara")
-    print("5. Tampilkan Daftar yang Telah Dihapus")
+    print("2. Pinjam Buku")
+    print("3. Kembalikan Buku")
+    print("4. Tampilkan Daftar Buku")
+    print("5. Daftar Buku Dipinjam")
     print("6. Keluar")
 
     pilihan = input("Masukkan pilihan Anda: ")
