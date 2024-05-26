@@ -1,12 +1,13 @@
 class Buku:
-    def __init__(self, judul, pengarang, tahun_terbit):
+    def __init__(self, judul, pengarang, tahun_terbit, codebuku):
         self.judul = judul
         self.pengarang = pengarang
         self.tahun_terbit = tahun_terbit
+        self.codebuku = codebuku
         self.dipinjam = False
 
     def __str__(self):
-        return f"{self.judul} oleh {self.pengarang}, {self.tahun_terbit}"
+        return f"{self.judul} oleh {self.pengarang}, {self.tahun_terbit}, {self.codebuku}"
 
 class Anggota:
     def __init__(self, nama, id_anggota):
@@ -66,8 +67,8 @@ class Perpustakaan:
 
 def main():
     perpustakaan = Perpustakaan()
-    perpustakaan.tambah_buku(Buku("The Hobbit", "J.R.R. Tolkien", 1937))
-    perpustakaan.tambah_buku(Buku("1984", "George Orwell", 1949))
+    perpustakaan.tambah_buku(Buku("The Hobbit", "J.R.R. Tolkien", 1937, "BKPS01"))
+    perpustakaan.tambah_buku(Buku("1984", "George Orwell", 1949, "BKPS02"))
 
     print("Selamat datang di Sistem Manajemen Perpustakaan!")
     while True:
@@ -86,7 +87,8 @@ def main():
             judul = input("Masukkan judul buku: ")
             pengarang = input("Masukkan pengarang buku: ")
             tahun_terbit = input("Masukkan tahun terbit buku: ")
-            perpustakaan.tambah_buku(Buku(judul, pengarang, tahun_terbit))
+            codebuku = input("Masukkan code buku: ")
+            perpustakaan.tambah_buku(Buku(judul, pengarang, tahun_terbit, codebuku))
             print("Buku berhasil ditambahkan.")
         elif pilihan == '2':
             judul = input("Masukkan judul buku yang ingin dihapus: ")
@@ -102,6 +104,7 @@ def main():
         elif pilihan == '4':
             print(perpustakaan.tampilkan_buku())
         elif pilihan == '5':
+            print(perpustakaan.tampilkan_buku())
             nama = input("Masukkan nama anggota: ")
             id_anggota = input("Masukkan ID anggota: ")
             perpustakaan.tambah_anggota(Anggota(nama, id_anggota))
