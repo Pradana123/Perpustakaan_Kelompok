@@ -9,3 +9,5 @@ Disini Kelompok Kami Membuat Program Perpustakaan Dengan Beberapa Fitur Seperti 
 8. Tampilkan Jumlah Buku Yang Tersedia -> Menampilkan Jumlah Buku Yang Tersedia di perpustakaan ( Pada saat buku dipinjam maka jumlah buku tersedia akan berkurang jika buku dikembalikan maka jumlah buku tersedia akan bertambah 1.
 9. Menu Keluar -> Menampilkan Pesan "Terima kasih telah menggunakan sistem perpustakaan kami."
 
+note : hapus anggota, tampilkan anggota, nomor anggota tidak boleh sama
+
