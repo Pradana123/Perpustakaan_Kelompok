@@ -151,7 +151,7 @@ def main():
             print("Terima kasih telah menggunakan sistem perpustakaan kami.")
             break
         else:
-            print(".")
+            print("Pilihan tidak valid. Silakan coba lagi.")
 
 if __name__ == "__main__":
     main()
