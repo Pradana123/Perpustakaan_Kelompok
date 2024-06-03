@@ -1,19 +1,4 @@
-class Buku:
-    def __init__(self, judul, pengarang, tahun_terbit, codebuku):
-        self.judul = judul
-        self.pengarang = pengarang
-        self.tahun_terbit = tahun_terbit
-        self.codebuku = codebuku
-        self.dipinjam = False
 
-    def __str__(self):
-        return f"{self.judul} oleh {self.pengarang}, {self.tahun_terbit}, {self.codebuku}"
-
-class Anggota:
-    def __init__(self, nama, id_anggota):
-        self.nama = nama
-        self.id_anggota = id_anggota
-        self.buku_dipinjam = []
 
     def pinjam_buku(self, buku):
         if not buku.dipinjam:
