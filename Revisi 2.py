@@ -10,7 +10,7 @@ class Buku:
         return f"{self.judul} oleh {self.pengarang}, {self.tahun_terbit}, {self.codebuku}"
 
 class Anggota:
-    def __init__(self, nama, id_anggota):
+    def __init__(self, nama, id_anggota):yhhhh
         self.nama = nama
         self.id_anggota = id_anggota
         self.buku_dipinjam = []
