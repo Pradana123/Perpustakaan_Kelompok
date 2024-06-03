@@ -1,4 +1,4 @@
-class Buku:j
+class Buku:
     def __init__(self, judul, pengarang, tahun_terbit, codebuku):
         self.judul = judul
         self.pengarang = pengarang
